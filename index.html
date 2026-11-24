@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final Touch Construction</title>
+<meta name="description" content="Concept homepage for Final Touch Construction, home remodeling and construction in Fontana, CA since 2009. Design preview by Chwispy Studio.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#EEEAE2;
+  --paper:#F8F6F1;
+  --forest:#17241C;
+  --forest-2:#1F3026;
+  --muted:#5E6761;
+  --rule:rgba(23,36,28,.14);
+  --rule-dk:rgba(238,234,226,.16);
+  --on-dk:rgba(238,234,226,.72);
+  --sun:#F2C230;
+  --gutter:clamp(20px,4.4vw,64px);
+  --max:1360px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--stone);color:var(--forest);font-family:"Schibsted Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px)}
+h1,h2,h3{font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,5.4vw,80px);line-height:1.02;letter-spacing:-.032em}
+h2{font-size:clamp(32px,3.7vw,54px);line-height:1.04;letter-spacing:-.028em}
+h3{font-size:clamp(20px,1.6vw,23px);line-height:1.25;letter-spacing:-.012em}
+.eyebrow{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.01em}
+.dark .eyebrow{color:var(--on-dk)}
+
+/* buttons are visual only on this concept */
+.btn{appearance:none;font:inherit;font-size:15px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 26px;border-radius:2px;border:1px solid transparent;cursor:default;white-space:nowrap;letter-spacing:.005em}
+.btn--sun{background:var(--sun);color:var(--forest)}
+.btn svg{width:15px;height:15px;flex:none}
+.link{font-size:15px;font-weight:600;color:var(--forest);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;white-space:nowrap}
+
+/* concept ribbon (watermark) */
+.ribbon{background:var(--forest);color:var(--on-dk);font-size:12px;letter-spacing:.04em}
+.ribbon .wrap{display:flex;justify-content:center;align-items:center;gap:8px;min-height:34px;text-align:center}
+.ribbon svg{width:13px;height:13px;color:var(--stone);flex:none}
+.ribbon b{color:var(--stone);font-weight:600}
+
+/* masthead: no menu on the free tier */
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:22px;padding-bottom:22px}
+.mast-logo{width:132px}
+.mast-right{display:flex;align-items:center;gap:clamp(18px,3vw,40px)}
+.mast-meta{font-size:14px;color:var(--muted);text-align:right;line-height:1.45}
+.mast-meta b{display:block;color:var(--forest);font-weight:600;font-size:15px}
+
+/* hero: stacked trade rows, Roofing leads on the dark band in yellow, overlapping photos */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero{padding-top:clamp(20px,2.4vw,36px)}
+.rows{position:relative;overflow-x:clip;padding-bottom:clamp(8px,1vw,16px)}
+.row{display:flex;justify-content:center;align-items:flex-start;gap:clamp(10px,1.2vw,18px);padding:clamp(4px,.5vw,8px) var(--gutter);margin:0}
+.row b{font-weight:800;font-size:clamp(52px,9.4vw,142px);letter-spacing:-.045em;text-transform:uppercase;line-height:.86;white-space:nowrap}
+.row small{font-size:clamp(9px,.75vw,11px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding-top:clamp(4px,.6vw,10px);color:var(--muted);white-space:nowrap}
+.row.lead{background:var(--forest);font-size:inherit;line-height:inherit;letter-spacing:0;padding-top:clamp(10px,1.1vw,16px);padding-bottom:clamp(10px,1.1vw,16px);margin:clamp(4px,.4vw,6px) 0}
+.row.lead b{color:var(--sun)}
+.row.lead small{color:var(--on-dk)}
+.stack{position:relative}
+.stack .row:nth-child(2){transform:translateX(-2%)}
+.stack .row:nth-child(4){transform:translateX(-3%)}
+.stack .row:nth-child(5){transform:translateX(5%)}
+.pic{position:absolute;z-index:2;margin:0;overflow:hidden;background:#d9d3c8;box-shadow:0 24px 48px -24px rgba(23,36,28,.45)}
+.pic img{width:100%;height:100%;object-fit:cover}
+.pic-l{left:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:66%;width:clamp(170px,16vw,236px);aspect-ratio:3 / 2.1}
+.pic-r{right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:3%;width:clamp(140px,14vw,210px);aspect-ratio:3 / 4}
+.pic-r img{object-position:50% 70%}
+.hero-cta{background:var(--forest);color:var(--stone);text-align:center;padding:clamp(56px,6vw,88px) 0 clamp(28px,3vw,40px)}
+.hero-cta p.line{font-size:clamp(17px,1.4vw,20px);color:var(--on-dk);max-width:60ch;margin:0 auto;text-wrap:balance}
+.hero-cta .btn{min-height:62px;padding:0 40px;font-size:16px;margin-top:30px}
+.hero-cta .call{display:block;margin-top:18px;font-size:14px;color:var(--on-dk)}
+.hero-cta .call b{color:var(--stone);font-weight:600}
+.hero-cta .wmrow{display:flex;justify-content:space-between;gap:16px;margin-top:clamp(48px,5vw,72px);padding-top:18px;border-top:1px solid var(--rule-dk);font-size:12px;color:var(--on-dk);text-align:left}
+.hero-cta .wmrow .tag svg{color:var(--stone)}
+
+.tag{display:inline-flex;align-items:center;gap:7px}
+.tag svg{width:12px;height:12px;flex:none}
+
+/* statement */
+.about{padding:clamp(88px,11vw,160px) 0}
+.about .eyebrow{grid-column:1 / span 3;padding-top:12px}
+.statement{grid-column:4 / span 9;font-size:clamp(25px,2.75vw,40px);line-height:1.22;letter-spacing:-.018em;font-weight:450;max-width:30ch}
+.statement span{color:var(--muted)}
+.facts{grid-column:4 / span 9;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);margin-top:clamp(48px,5vw,72px)}
+.facts div{border-top:1px solid var(--rule);padding-top:16px}
+.facts dt{font-size:13px;color:var(--muted)}
+.facts dd{margin:6px 0 0;font-size:17px;font-weight:500;line-height:1.4}
+
+/* selected work */
+.work{padding:0 0 clamp(96px,12vw,176px)}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;border-top:1px solid var(--rule);padding-top:22px;margin-bottom:clamp(36px,4.4vw,64px)}
+.work-head p{color:var(--muted);max-width:40ch;text-align:right}
+.gallery{row-gap:clamp(40px,4.4vw,64px)}
+.shot{display:flex;flex-direction:column}
+.shot .ph{position:relative;overflow:hidden;background:#d9d3c8;flex:1;min-height:0}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.shot .tag{position:absolute;left:12px;top:12px;z-index:1;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--stone);background:rgba(23,36,28,.62);padding:6px 9px}
+.shot .tag svg{color:var(--stone)}
+.row-a{height:clamp(320px,38vw,560px)}
+.row-b{height:clamp(300px,34vw,500px)}
+.w1{grid-column:1 / span 8}
+.w2{grid-column:9 / span 4}
+.w3{grid-column:1 / span 3}
+.w5{grid-column:4 / span 3}
+.w4{grid-column:7 / span 6}
+.w4 img{object-position:50% 60%}
+.w5 img{object-position:50% 62%}
+
+/* services */
+.dark{background:var(--forest);color:var(--stone)}
+.services{padding:clamp(88px,11vw,160px) 0 clamp(72px,8vw,120px)}
+.services-head{grid-column:1 / span 5}
+.services-head p{color:var(--on-dk);margin-top:24px;max-width:34ch}
+.svc-a{grid-column:7 / span 3}
+.svc-b{grid-column:10 / span 3}
+.svc-col h3{font-size:13px;font-weight:500;letter-spacing:.01em;color:var(--on-dk);padding-bottom:14px;border-bottom:1px solid var(--rule-dk)}
+.svc-col ul{list-style:none;margin:0;padding:0}
+.svc-col li{padding:15px 0;border-bottom:1px solid var(--rule-dk);font-size:clamp(18px,1.45vw,21px);font-weight:450;letter-spacing:-.01em;line-height:1.3}
+.svc-col li small{display:block;font-size:13px;color:var(--on-dk);letter-spacing:0;margin-top:3px;font-weight:400}
+.fine-row{margin-top:clamp(80px,9vw,128px)}
+.fine{grid-column:span 4;border-top:1px solid var(--rule-dk);padding-top:20px}
+.fine p{max-width:36ch}
+.fine h3{margin-bottom:10px}
+.fine p{color:var(--on-dk);font-size:15px;line-height:1.6}
+.fine p + p{margin-top:10px;font-size:13px;color:rgba(238,234,226,.52)}
+
+/* review */
+.review{padding:clamp(96px,12vw,176px) 0}
+.review .eyebrow{grid-column:1 / span 3;padding-top:14px}
+.review blockquote{grid-column:4 / span 8;margin:0;font-size:clamp(26px,3vw,44px);line-height:1.2;letter-spacing:-.02em;font-weight:450}
+.review .who{grid-column:4 / span 8;margin-top:28px;font-size:15px;color:var(--muted)}
+.review .who b{color:var(--forest);font-weight:600}
+.review-2{grid-column:4 / span 5;margin-top:clamp(56px,6vw,88px);border-top:1px solid var(--rule);padding-top:22px}
+.review-2 blockquote{all:unset;display:block;font-size:17px;line-height:1.6;color:var(--forest)}
+.review-2 .who{margin-top:14px;font-size:14px}
+.review .src{grid-column:10 / span 3;align-self:end;font-size:13px;color:var(--muted);margin-top:24px}
+
+/* contact */
+.contact{padding:0 0 clamp(96px,12vw,160px)}
+.contact-inner{border-top:1px solid var(--rule);padding-top:clamp(48px,6vw,80px)}
+.contact-head{grid-column:1 / span 5}
+.contact-head p.lede{color:var(--muted);margin-top:22px;max-width:36ch}
+.details{list-style:none;margin:clamp(36px,4vw,56px) 0 0;padding:0}
+.details li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--rule);font-size:16px;line-height:1.5}
+.details li:last-child{border-bottom:1px solid var(--rule)}
+.details span{color:var(--muted);font-size:13px;padding-top:2px}
+.form{grid-column:7 / span 6;background:var(--paper);padding:clamp(28px,3.4vw,48px);align-self:start}
+.form .step{display:block;font-size:13px;color:var(--muted);letter-spacing:0;font-weight:400;margin-bottom:8px}
+.form legend,.form .q{font-size:clamp(22px,2vw,28px);font-weight:500;letter-spacing:-.018em;line-height:1.2;margin:0 0 22px;padding:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--rule);background:#fff;font-size:15px;line-height:1.2}
+.chip input:checked + span{background:var(--forest);color:var(--stone);border-color:var(--forest)}
+.chip input:focus-visible + span{outline:2px solid var(--forest);outline-offset:2px}
+.form-sep{height:1px;background:var(--rule);margin:clamp(28px,3vw,40px) 0}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+.field input{font:inherit;font-size:16px;color:var(--forest);background:#fff;border:1px solid var(--rule);border-radius:0;min-height:52px;padding:0 14px}
+.field input:focus{outline:2px solid var(--forest);outline-offset:-1px}
+.form-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px}
+.form-foot small{font-size:13px;color:var(--muted);max-width:26ch;line-height:1.45}
+
+/* footer */
+footer{border-top:1px solid var(--rule);padding:clamp(40px,5vw,64px) 0 56px}
+.foot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,28px);row-gap:28px;align-items:start;font-size:14px;color:var(--muted);line-height:1.6}
+.foot img{width:112px;grid-column:1 / span 3}
+.foot .addr{grid-column:4 / span 3}
+.foot .ph{grid-column:7 / span 3}
+.foot .credit{grid-column:10 / span 3;justify-self:end;display:inline-flex;align-items:center;gap:8px}
+.foot .credit svg{width:15px;height:15px;color:var(--forest)}
+.foot b{color:var(--forest);font-weight:600}
+.foot .legal{grid-column:1 / -1;font-size:13px;border-top:1px solid var(--rule);padding-top:20px}
+
+@media (max-width:1080px){
+  .pics{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;padding:0 var(--gutter);margin:28px auto -64px;position:relative;z-index:2;max-width:var(--max);height:clamp(240px,40vw,380px)}
+  .pic{position:static;width:auto;height:100%;aspect-ratio:auto}
+  .hero-cta{padding-top:96px}
+  .about .eyebrow{grid-column:1 / -1;padding:0 0 18px}
+  .statement,.facts{grid-column:1 / -1}
+  .services-head{grid-column:1 / -1;margin-bottom:48px}
+  .svc-a,.svc-b{grid-column:span 6}
+  .fine{grid-column:1 / -1;margin-top:28px}
+  .fine:first-child{margin-top:0}
+  .review .eyebrow{grid-column:1 / -1;padding:0 0 20px}
+  .review blockquote,.review .who,.review-2{grid-column:1 / -1}
+  .review .src{grid-column:1 / -1}
+  .contact-head,.form{grid-column:1 / -1}
+  .form{margin-top:48px}
+  .foot img{grid-column:1 / span 4}
+  .foot .addr{grid-column:5 / span 4}
+  .foot .ph{grid-column:9 / span 4}
+  .foot .credit{grid-column:1 / -1;justify-self:start}
+}
+@media (max-width:720px){
+  .row{gap:6px;padding-left:16px;padding-right:16px}
+  .row b{font-size:clamp(44px,14.6vw,64px)}
+  .row small{display:none}
+  .stack .row:nth-child(n){transform:none}
+  .pics{height:clamp(210px,60vw,300px);margin-top:20px;margin-bottom:-56px}
+  .hero-cta .btn{width:100%}
+  .hero-cta .wmrow{flex-direction:column;gap:6px}
+  body{font-size:16px}
+  .mast .wrap{padding-top:16px;padding-bottom:16px}
+  .mast-logo{width:104px}
+  .mast-meta span{display:none}
+  .facts{grid-template-columns:1fr;row-gap:0}
+  .facts div{padding:14px 0}
+  .facts div:last-child{border-bottom:1px solid var(--rule)}
+  .work-head{flex-direction:column;align-items:flex-start}
+  .work-head p{text-align:left}
+  .gallery{row-gap:32px}
+  .row-a,.row-b{height:auto}
+  .w1,.w2,.w4{grid-column:1 / -1}
+  .w3{grid-column:1 / span 6}
+  .w5{grid-column:7 / span 6}
+  .w1 .ph,.w4 .ph{aspect-ratio:4 / 3}
+  .w2 .ph{aspect-ratio:4 / 5}
+  .w3 .ph,.w5 .ph{aspect-ratio:3 / 4}
+  .w2{order:1}.w3{order:2}.w5{order:3}.w4{order:4}
+  .w1{order:0}
+  .svc-a,.svc-b{grid-column:1 / -1}
+  .svc-b{margin-top:40px}
+  .fields{grid-template-columns:1fr}
+  .form-foot .btn{width:100%}
+  .details li{grid-template-columns:76px 1fr}
+  .foot img,.foot .addr,.foot .ph,.foot .credit{grid-column:1 / -1}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="nonzero" d="M20 20H90V44H20ZM20 20H44V90H20ZM166 20H236V44H166ZM212 20H236V90H212ZM20 212H90V236H20ZM20 166H44V236H20ZM166 212H236V236H166ZM212 166H236V236H212Z"/><circle cx="66" cy="66" r="20" fill="currentColor"/><path fill="currentColor" d="M133.91 212.78Q114.78 212.78 106.67 204.81Q98.56 196.84 98.19 178.38Q98 169.19 97.91 158.31Q97.81 147.44 97.81 136Q97.81 124.56 97.91 113.64Q98 102.72 98.19 93.44Q98.47 77.5 106.86 68.41Q115.25 59.31 133.91 59.31Q152.28 59.31 160.53 67.23Q168.78 75.16 169.25 93.53Q169.34 96.81 169.34 100.84Q169.34 104.88 169.25 108.95Q169.16 113.03 169.06 116.22H144.88Q144.97 112.38 145.06 107.55Q145.16 102.72 145.16 97.84Q145.16 92.97 145.06 89.12Q144.97 84.16 142.11 81.62Q139.25 79.09 133.91 79.09Q128.38 79.09 125.47 81.62Q122.56 84.16 122.38 89.12Q122 100 121.86 111.91Q121.72 123.81 121.72 136Q121.72 148.19 121.86 160.05Q122 171.91 122.38 182.78Q122.56 187.84 125.47 190.42Q128.38 193 133.91 193Q139.72 193 142.72 190.42Q145.72 187.84 145.81 182.78Q145.91 178.94 145.95 173.97Q146 169 145.95 164.03Q145.91 159.06 145.81 155.31H170Q170.19 160.66 170.19 166.8Q170.19 172.94 170 178.38Q169.53 196.84 161.14 204.81Q152.75 212.78 133.91 212.78Z"/></svg><span>Concept homepage designed by <b>Chwispy Studio</b></span></div></div>
+
+<div class="mast">
+  <div class="wrap">
+    <img class="mast-logo" src="img/final-touch-logo.png" alt="Final Touch Construction and Design" width="650" height="378">
+    <div class="mast-right">
+      <p class="mast-meta"><b>909-350-3658</b><span>Mon to Fri, 8 AM to 5 PM</span></p>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="rows">
+    <div class="stack">
+      <div class="row"><small>Energy</small><b>Solar</b></div>
+      <div class="row"><small>Interior</small><b>Kitchens</b></div>
+      <h1 class="row lead"><small>Exterior</small><b><span class="vh">Final Touch Construction: </span>Roofing</b></h1>
+      <div class="row"><small>Interior</small><b>Baths</b></div>
+      <div class="row"><small>Exterior</small><b>Windows</b></div>
+      <div class="pics">
+        <figure class="pic pic-l"><img src="img/great-room-kitchen.jpg" alt="Open kitchen and great room with a vaulted beam ceiling and a wall of windows" width="1280" height="688"></figure>
+        <figure class="pic pic-r"><img src="img/glass-shower.jpg" alt="Frameless glass shower with deep green tile next to a freestanding tub" width="949" height="1265"></figure>
+      </div>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <div class="wrap">
+      <p class="line">Free estimates, virtual or in person. Monday to Friday, 8&nbsp;AM to 5&nbsp;PM.</p>
+      <button type="button" class="btn btn--sun">Request a free estimate</button>
+      <span class="call">or call <b>909-350-3658</b></span>
+      <div class="wmrow"><span>Kitchen and great room, primary bath</span><span class="tag"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="nonzero" d="M20 20H90V44H20ZM20 20H44V90H20ZM166 20H236V44H166ZM212 20H236V90H212ZM20 212H90V236H20ZM20 166H44V236H20ZM166 212H236V236H166ZM212 166H236V236H212Z"/><circle cx="66" cy="66" r="20" fill="currentColor"/><path fill="currentColor" d="M133.91 212.78Q114.78 212.78 106.67 204.81Q98.56 196.84 98.19 178.38Q98 169.19 97.91 158.31Q97.81 147.44 97.81 136Q97.81 124.56 97.91 113.64Q98 102.72 98.19 93.44Q98.47 77.5 106.86 68.41Q115.25 59.31 133.91 59.31Q152.28 59.31 160.53 67.23Q168.78 75.16 169.25 93.53Q169.34 96.81 169.34 100.84Q169.34 104.88 169.25 108.95Q169.16 113.03 169.06 116.22H144.88Q144.97 112.38 145.06 107.55Q145.16 102.72 145.16 97.84Q145.16 92.97 145.06 89.12Q144.97 84.16 142.11 81.62Q139.25 79.09 133.91 79.09Q128.38 79.09 125.47 81.62Q122.56 84.16 122.38 89.12Q122 100 121.86 111.91Q121.72 123.81 121.72 136Q121.72 148.19 121.86 160.05Q122 171.91 122.38 182.78Q122.56 187.84 125.47 190.42Q128.38 193 133.91 193Q139.72 193 142.72 190.42Q145.72 187.84 145.81 182.78Q145.91 178.94 145.95 173.97Q146 169 145.95 164.03Q145.91 159.06 145.81 155.31H170Q170.19 160.66 170.19 166.8Q170.19 172.94 170 178.38Q169.53 196.84 161.14 204.81Q152.75 212.78 133.91 212.78Z"/></svg>Concept by Chwispy Studio</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <div class="wrap grid">
+    <p class="eyebrow">Final Touch Construction &amp; Design</p>
+    <p class="statement">A Fontana contractor working on homes since 2009. <span>One company for the work inside the house and the work on top of it, from the first estimate to the final walkthrough.</span></p>
+    <dl class="facts">
+      <div><dt>Founded</dt><dd>2009, Fontana, CA</dd></div>
+      <div><dt>Trades</dt><dd>Ten, from roofing to remodels</dd></div>
+      <div><dt>Serving</dt><dd>Inland Empire, LA, Orange, Ventura and San&nbsp;Diego</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="work">
+  <div class="wrap">
+    <div class="work-head">
+      <h2>Selected work</h2>
+      <p>Interior remodels from Final Touch&rsquo;s own project gallery.</p>
+    </div>
+    <div class="grid gallery">
+      <figure class="shot w1 row-a"><div class="ph"><img src="img/open-living-dining.jpg" alt="Open living and dining room with black ceiling beams, wood floors and a long dining table" width="1024" height="626"><span class="tag"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="nonzero" d="M20 20H90V44H20ZM20 20H44V90H20ZM166 20H236V44H166ZM212 20H236V90H212ZM20 212H90V236H20ZM20 166H44V236H20ZM166 212H236V236H166ZM212 166H236V236H212Z"/><circle cx="66" cy="66" r="20" fill="currentColor"/><path fill="currentColor" d="M133.91 212.78Q114.78 212.78 106.67 204.81Q98.56 196.84 98.19 178.38Q98 169.19 97.91 158.31Q97.81 147.44 97.81 136Q97.81 124.56 97.91 113.64Q98 102.72 98.19 93.44Q98.47 77.5 106.86 68.41Q115.25 59.31 133.91 59.31Q152.28 59.31 160.53 67.23Q168.78 75.16 169.25 93.53Q169.34 96.81 169.34 100.84Q169.34 104.88 169.25 108.95Q169.16 113.03 169.06 116.22H144.88Q144.97 112.38 145.06 107.55Q145.16 102.72 145.16 97.84Q145.16 92.97 145.06 89.12Q144.97 84.16 142.11 81.62Q139.25 79.09 133.91 79.09Q128.38 79.09 125.47 81.62Q122.56 84.16 122.38 89.12Q122 100 121.86 111.91Q121.72 123.81 121.72 136Q121.72 148.19 121.86 160.05Q122 171.91 122.38 182.78Q122.56 187.84 125.47 190.42Q128.38 193 133.91 193Q139.72 193 142.72 190.42Q145.72 187.84 145.81 182.78Q145.91 178.94 145.95 173.97Q146 169 145.95 164.03Q145.91 159.06 145.81 155.31H170Q170.19 160.66 170.19 166.8Q170.19 172.94 170 178.38Q169.53 196.84 161.14 204.81Q152.75 212.78 133.91 212.78Z"/></svg>Chwispy Studio concept</span></div><figcaption>Living and dining</figcaption></figure>
+      <figure class="shot w2 row-a"><div class="ph"><img src="img/glass-shower.jpg" alt="Frameless glass shower with deep green tile and pebble floor next to a freestanding tub" width="949" height="1265"></div><figcaption>Primary bath, glass shower</figcaption></figure>
+      <figure class="shot w3 row-b"><div class="ph"><img src="img/double-vanity.jpg" alt="Double vanity with round mirrors against a green subway tile wall" width="949" height="1265"></div><figcaption>Double vanity</figcaption></figure>
+      <figure class="shot w5 row-b"><div class="ph"><img src="img/powder-room.jpg" alt="Powder room with wood vanity, white top and a globe light bar" width="949" height="1265"></div><figcaption>Powder room</figcaption></figure>
+      <figure class="shot w4 row-b"><div class="ph"><img src="img/kitchen-island.jpg" alt="Waterfall kitchen island under black pendant lights with a patterned tile backsplash" width="1024" height="768"></div><figcaption>Kitchen, waterfall island</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="services dark">
+  <div class="wrap">
+    <div class="grid">
+      <div class="services-head">
+        <p class="eyebrow">Services</p>
+        <h2 style="margin-top:18px">Inside the house and on top of it.</h2>
+        <p>Ten trades under one company, so the schedule, the crew and the cleanup stay with one office.</p>
+      </div>
+      <div class="svc-col svc-a">
+        <h3>Roof, energy and exterior</h3>
+        <ul>
+          <li>Roofing</li>
+          <li>Commercial roofing</li>
+          <li>Solar panels</li>
+          <li>Tesla Solar Roof<small>With Powerwall</small></li>
+          <li>Windows</li>
+          <li>Patio covers</li>
+          <li>Concrete</li>
+        </ul>
+      </div>
+      <div class="svc-col svc-b">
+        <h3>Inside the home</h3>
+        <ul>
+          <li>Kitchen and bath remodeling</li>
+          <li>Heating and air</li>
+          <li>Painting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid fine-row">
+      <div class="fine">
+        <h3>Title 24 compliant</h3>
+        <p>California's Title 24 sets energy rules for new construction, additions, ADUs and remodels. Final Touch builds to it.</p>
+      </div>
+      <div class="fine">
+        <h3>Financing</h3>
+        <p>Low monthly payment and zero-down options. Qualified homeowners may get up to 18 months with no interest.</p>
+        <p>Through third-party lenders. Not every homeowner qualifies.</p>
+      </div>
+      <div class="fine">
+        <h3>Consultations</h3>
+        <p>Virtual or in person, Monday to Friday, 8&nbsp;AM to 5&nbsp;PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="review">
+  <div class="wrap grid">
+    <p class="eyebrow">From a homeowner</p>
+    <blockquote>&ldquo;I was given an estimated time of 30 days. I thought at the time that it would be impossible. It WAS done. Their crews showed up every morning on time.&rdquo;</blockquote>
+    <p class="who"><b>Karole J.</b>, Fontana</p>
+    <div class="review-2">
+      <blockquote>&ldquo;Luis and his crew have gone above and beyond&hellip; They took our vision and turned it into a reality. They work very efficiently and clean up after themselves everyday.&rdquo;</blockquote>
+      <p class="who"><b>David R.</b>, Fontana</p>
+    </div>
+    <p class="src">Reviews shared by Final Touch clients.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="grid contact-inner">
+      <div class="contact-head">
+        <p class="eyebrow">Free estimate</p>
+        <h2 style="margin-top:18px">Tell us what the house needs.</h2>
+        <p class="lede">Pick the work and leave a number. The office calls you back to set up a visit.</p>
+        <ul class="details">
+          <li><span>Office</span>16466 Foothill Blvd, Fontana, CA 92335</li>
+          <li><span>Phone</span>909-350-3658<br>888-639-6948</li>
+          <li><span>Hours</span>Monday to Friday, 8 AM to 5 PM</li>
+        </ul>
+      </div>
+      <form class="form" onsubmit="return false" aria-label="Estimate request (preview)">
+        <fieldset>
+          <legend><span class="step">Step 1 of 2</span>What do you need help with?</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="need" value="Roofing"><span>Roofing</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Solar"><span>Solar or Tesla Solar Roof</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Kitchen or bath"><span>Kitchen or bath</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Heating and air"><span>Heating and air</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Windows"><span>Windows</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Patio cover"><span>Patio cover</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Concrete"><span>Concrete</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Painting"><span>Painting</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="Other"><span>Something else</span></label>
+          </div>
+        </fieldset>
+        <div class="form-sep"></div>
+        <p class="step">Step 2 of 2</p>
+        <p class="q">Where should we call you?</p>
+        <div class="fields">
+          <label class="field">Name<input type="text" name="name" autocomplete="name"></label>
+          <label class="field">Phone<input type="tel" name="phone" autocomplete="tel"></label>
+        </div>
+        <div class="form-foot">
+          <small>Preview only. This form doesn't send yet.</small>
+          <button type="button" class="btn btn--sun">Request my estimate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <img src="img/final-touch-logo.png" alt="Final Touch Construction and Design" width="650" height="378">
+    <p class="addr">16466 Foothill Blvd<br>Fontana, CA 92335</p>
+    <p class="ph"><b>909-350-3658</b><br>888-639-6948</p>
+    <p class="credit"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="nonzero" d="M20 20H90V44H20ZM20 20H44V90H20ZM166 20H236V44H166ZM212 20H236V90H212ZM20 212H90V236H20ZM20 166H44V236H20ZM166 212H236V236H166ZM212 166H236V236H212Z"/><circle cx="66" cy="66" r="20" fill="currentColor"/><path fill="currentColor" d="M133.91 212.78Q114.78 212.78 106.67 204.81Q98.56 196.84 98.19 178.38Q98 169.19 97.91 158.31Q97.81 147.44 97.81 136Q97.81 124.56 97.91 113.64Q98 102.72 98.19 93.44Q98.47 77.5 106.86 68.41Q115.25 59.31 133.91 59.31Q152.28 59.31 160.53 67.23Q168.78 75.16 169.25 93.53Q169.34 96.81 169.34 100.84Q169.34 104.88 169.25 108.95Q169.16 113.03 169.06 116.22H144.88Q144.97 112.38 145.06 107.55Q145.16 102.72 145.16 97.84Q145.16 92.97 145.06 89.12Q144.97 84.16 142.11 81.62Q139.25 79.09 133.91 79.09Q128.38 79.09 125.47 81.62Q122.56 84.16 122.38 89.12Q122 100 121.86 111.91Q121.72 123.81 121.72 136Q121.72 148.19 121.86 160.05Q122 171.91 122.38 182.78Q122.56 187.84 125.47 190.42Q128.38 193 133.91 193Q139.72 193 142.72 190.42Q145.72 187.84 145.81 182.78Q145.91 178.94 145.95 173.97Q146 169 145.95 164.03Q145.91 159.06 145.81 155.31H170Q170.19 160.66 170.19 166.8Q170.19 172.94 170 178.38Q169.53 196.84 161.14 204.81Q152.75 212.78 133.91 212.78Z"/></svg><span>Concept design by <b>Chwispy Studio</b></span></p>
+    <p class="legal">&copy; 2026 Final Touch Construction. Concept homepage, not the live site.</p>
+  </div>
+</footer>
+
+</body>
+</html>
